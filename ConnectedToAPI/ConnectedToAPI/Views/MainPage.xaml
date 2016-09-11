@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:ConnectedToAPI.ViewModels;assembly=ConnectedToAPI"
+             x:Class="ConnectedToAPI.Views.MainPage">
+
+
+  <ContentPage.BindingContext>
+    <viewModels:MainViewModel/>
+  </ContentPage.BindingContext>
+  <StackLayout Orientation="Vertical" Padding="10,5,10,5">
+    <Button x:Name="Login" Text="Login" Clicked="Login_OnClicked"></Button>
+    <Button x:Name="add" Text="Add Emp" Clicked="Button_OnClicked"></Button>
+    <Image Source="https://xamarin.com/content/images/pages/forms/example-app.png" />
+    <Image Source="iconEmail.png" />
+    
+    <ListView ItemsSource="{Binding EmployeesList}" HasUnevenRows="True" BackgroundColor="Silver" >
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+
+            <StackLayout Orientation="Horizontal" Padding="10" BackgroundColor="Pink" Spacing="8">
+              <Label Text="Row : " TextColor="Black" />
+              <Label Text="{Binding id }" TextColor="Black" />
+              <Label Text="{Binding e_empno} " TextColor="Black"/>
+              <Label Text="{Binding e_namear}" TextColor="Black" />
+              <Label Text="{Binding e_nameen}" TextColor="Black" />
+            </StackLayout>
+
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+</ContentPage>

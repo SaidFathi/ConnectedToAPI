@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ConnectedToAPI.Views.Login">
+  <StackLayout Orientation="Vertical" BackgroundColor="Maroon" Padding="10,5,10,5" Spacing="5">
+    <StackLayout VerticalOptions="CenterAndExpand" Orientation="Vertical">
+<Label Text="Al Kass Sports Channel " TextColor="White" FontSize="25" FontFamily="tahoma" HorizontalOptions="Center" VerticalOptions="Center" />
+      <StackLayout Orientation="Horizontal" Padding="0" Spacing="0" HorizontalOptions="FillAndExpand">
+        <Image Source="iconUsername.png" WidthRequest="30"  BackgroundColor="Transparent"/>
+        <Entry x:Name="txtUID" Placeholder="Username" PlaceholderColor="Silver" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="Center" />
+      </StackLayout>
+       <StackLayout Orientation="Horizontal" Padding="0" Spacing="0" HorizontalOptions="FillAndExpand">
+        <Image Source="iconPassword.png" WidthRequest="30"  BackgroundColor="Transparent"/>
+        <Entry x:Name="passtxt" Placeholder="Password" PlaceholderColor="Silver" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="Center" />
+      </StackLayout>
+      <StackLayout Orientation="Horizontal" Padding="0" Spacing="0" HorizontalOptions="FillAndExpand">
+        <Image Source="iconEmail.png" WidthRequest="30"  BackgroundColor="Transparent"/>
+        <Entry x:Name="txtName" Placeholder="Email" PlaceholderColor="Silver" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="Center" />
+      </StackLayout>
+      <Button x:Name="login" Text="Login" BackgroundColor="Maroon" BorderColor="White" TextColor="White"/>
+    </StackLayout>
+  </StackLayout>
+
+
+</ContentPage>

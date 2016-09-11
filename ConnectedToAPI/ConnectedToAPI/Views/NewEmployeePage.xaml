@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:ConnectedToAPI.ViewModels;assembly=ConnectedToAPI"
+             x:Class="ConnectedToAPI.Views.NewEmployeePage">
+
+
+  <ContentPage.BindingContext>
+    <viewModels:MainViewModel/>
+  </ContentPage.BindingContext>
+  <StackLayout Orientation="Vertical" Spacing="5" Padding="10,5,10,5">
+    <Label Text="No"/>
+    <Entry Text="{Binding SelectEmployee.e_empno , Mode=TwoWay}"/>
+    <Label Text="NameAr"/>
+    <Entry Text="{Binding SelectEmployee.e_namear , Mode=TwoWay}"/>
+    <Label Text="NameEn"/>
+    <Entry Text="{Binding SelectEmployee.e_nameen , Mode=TwoWay}"/>
+
+    <Button x:Name="Update" Text="Update" Command="{Binding PostCommand}"></Button>
+
+  </StackLayout>
+</ContentPage>
